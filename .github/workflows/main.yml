@@ -30,7 +30,14 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
 
       - name: Step 5 - Persist workflow data as artificats
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: github-actions-artifact
           path: staging
+      
+      
+      - name: Step 6 - downlaod artifacts to local machine
+        uses: actions/download-artifact@v3
+        with:
+          name: github-actions-artifact
+          path: C:\Users\vishnu.b.vardhan\Documents\github actions artifacts
