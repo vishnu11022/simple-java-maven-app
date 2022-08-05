@@ -4,6 +4,10 @@ on:
     paths: jenkins/**
     
   workflow_dispatch:
+    inputs:
+      Service Name:
+        required: true
+        type: string
   
 jobs:
 
