@@ -1,7 +1,10 @@
 on:
   push:
     branches: [ vishnu ]
+    paths: jenkins/**
+    
   workflow_dispatch:
+  
 jobs:
 
   build-on-ubuntu:
